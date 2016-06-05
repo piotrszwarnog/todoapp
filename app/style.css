@@ -7,3 +7,12 @@ body{
     color: #999999;
     font-family: "Courier New", Courier , sans-serif;
 }
+.todo-column{
+    width: 300px;
+}
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+    border: none;
+}
+.delete-button{
+    font-family: "Lucida Console", Lucida , sans-serif;
+}
