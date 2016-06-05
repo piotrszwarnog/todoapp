@@ -1,12 +1,27 @@
 <div class="col-md-4">
     <br>
+    <h1>Tuduap</h1>
     <br>
-    <label>email: <input ng-model="searchText"></label>
-    <table class="table">
-        <tr ng-repeat="item in tuduapp.items| filter:searchText">
-            <td>{{item.userAddress}}</td>
-        </tr>
-    </table>
+    <label>email: <input ng-model="tuduapp.userAddress"></label>
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <tbody>
+            <tr>
+                
+                <th>Todo</th>
+                <th>Who's</th>
+                <th>Complete</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="item in tuduapp.items| filter:tuduapp.userAddress">
+                <td>{{item.content}}</td>
+                <td>{{item.userAddress}}</td>
+                <td><input type="checkbox" value="{{ item.completed }}" /></td>
+                <td><button class="btn btn-danger btn-xs" ng-click="tuduapp.deleteItem(item.$id)" >Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     
     <add-input></add-input>
 </div>

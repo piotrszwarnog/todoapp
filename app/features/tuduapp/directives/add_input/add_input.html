@@ -1,10 +1,9 @@
 
-    <form id="addItemForm" ng-submit="tuduapp.addItem()">
+    
         <div class="input-group input-group-lg">
             <input  ng-model="tuduapp.content" type="text" placeholder="Add new tasks" required/>
-            <input  ng-model="tuduapp.userAddress" type="text" placeholder="Type email" required/>
             <span class="input-group-btn">
-                <button type="submit" form="addItemForm">Add</button>
+                <button class="btn btn-default btn-xs" ng-click="tuduapp.addItem()">Add</button>
             </span>
         </div>
-    </form>
+  

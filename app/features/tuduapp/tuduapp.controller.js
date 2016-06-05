@@ -13,10 +13,15 @@ export default class TuduappController {
   }
   
   addItem() {
-       this.itemsRef.push({
-          content: this.content,
-          userAddress: this.userAddress,
-          completed: "false"
-      });
-    }
+     this.itemsRef.push({
+        content: this.content,
+        userAddress: this.userAddress,
+        completed: "false"
+    });
+  }
+    
+  deleteItem(id) {
+    this.itemsRef.child(id).remove();
+  }
+  
 }

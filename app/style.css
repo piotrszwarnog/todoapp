@@ -1,8 +1,9 @@
 h1{
-    color: #ffff3f;
+    color: #999999;
 }
 
 body{
     background: #080d11;
-    color: #fff33f;
+    color: #999999;
+    font-family: "Courier New", Courier , sans-serif;
 }
