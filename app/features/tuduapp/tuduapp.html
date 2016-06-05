@@ -1,9 +1,12 @@
 <div class="col-md-4">
     <br>
     <br>
+    <label>email: <input ng-model="searchText"></label>
     <table class="table">
-        <tr ng-repeat="item in tuduapp.items">
-            <td>{{item.text}}</td>
+        <tr ng-repeat="item in tuduapp.items| filter:searchText">
+            <td>{{item.userAddress}}</td>
         </tr>
     </table>
+    
+    <add-input></add-input>
 </div>
