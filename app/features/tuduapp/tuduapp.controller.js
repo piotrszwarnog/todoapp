@@ -12,12 +12,13 @@ export default class TuduappController {
     console.log(this.items)
   }
 
-  addItem() {
+  addItem(addInpt) {
     this.itemsRef.push({
       content: this.content,
       userAddress: this.userAddress,
       completed: "false"
     });
+    document.getElementById(addInpt).value = '';
   }
 
   deleteItem(id) {

@@ -9,7 +9,7 @@ body {
 }
 
 #header-row {
-    font-size: large;
+    font-size: x-large;
 }
 
 #todo-column {
@@ -42,6 +42,18 @@ body {
     color: #262626;
 }
 
-add-input{
-display:inline-flex;
+add-input {
+    display: inline-flex;
+}
+
+add-input button {
+    margin-left: 10px;
+}
+
+stats {
+    color: #262626;
+}
+
+stats label {
+    margin: 10px;
 }

@@ -9,10 +9,12 @@ import routing from './tuduapp.routes';
 // Import controllers for this module
 import TuduappController from './tuduapp.controller';
 import addInput from './directives/add_input';
+import stats from './directives/stats';
 
 
 export default angular.module('app.tuduapp', [uirouter, angularFire])
   .config(routing)
   .controller('TuduappController', TuduappController)
   .directive('addInput', addInput)
+  .directive('stats', stats)
   .name;

@@ -2,8 +2,6 @@
     <br>
     <h1>Tuduap</h1>
     <br>
-    
-    <br>
     <label>filter by email
         <input class="input" type="checkbox" ng-disabled="tuduapp.userAddress == ''" ng-model="doFilter" ng-init="doFilter = false">
     </label>
@@ -22,7 +20,7 @@
                 <th id="complete-column"></th>
                 <th id="delete-column"></th>
             </tr>
-            <tr ng-repeat="item in tuduapp.items | filter: (doFilter ? {'userAddress': tuduapp.userAddress} : ''):doFilter | filter: (showDone ? { 'completed' : tuduapp.completed == false}: '') | filter: (showPending ? { 'completed' : tuduapp.completed == true}: '')">
+            <tr ng-repeat="item in tuduapp.items | filter: (doFilter ? {'userAddress': tuduapp.userAddress} : ''):doFilter | filter: (showDone ? { 'completed' : tuduapp.completed == false} : '') | filter: (showPending ? { 'completed' : tuduapp.completed == true} : '') as count">
                 <td>{{item.content}}</td>
                 <td>{{item.userAddress}}</td>
                 <td>
@@ -38,4 +36,5 @@
         <input ng-model="tuduapp.userAddress">
     </label>
     <add-input></add-input>
+    <stats></stats>
 </div>

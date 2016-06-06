@@ -1,0 +1,6 @@
+<div class="input-group input-group-lg">
+    <label>total: <span>{{count.length}}</span></label>
+    <label>total completed: <span>{{(tuduapp.items | filter:item.completed != false).length}}</span></label>
+    <label>total pending: <span>{{(tuduapp.items | filter:item.completed == false).length}}</span></label>
+    <!--<label>yours: <span>{{(tuduapp.items | filter:tuduapp.userAddress == item.userAddress).length}}</span></label>-->
+</div>
