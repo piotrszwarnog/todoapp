@@ -24,7 +24,7 @@ export default class TuduappController {
     this.itemsRef.child(id).remove();
   }
 
-  completeItem(id, btn) {
+  completeItem(id) {
 
     let inputRef = new Firebase("https://kotogniew.firebaseio.com/items");
     var cmpltd;
@@ -45,13 +45,13 @@ export default class TuduappController {
       }
 
     });
-    this.updateButtonColor(cmpltd, btn)
+    this.updateButtonColor(cmpltd, id)
   }
 
-  updateButtonColor(cmpltd, btn) {
-    var property = document.getElementById(btn);
-    property.classList.add(cmpltd ? 'btn-info' : 'btn-success');
-    property.classList.remove(cmpltd ? 'btn-success' : 'btn-info');
+  updateButtonColor(cmpltd, btnId) {
+    var property = document.getElementById(btnId);
+    property.classList.add(cmpltd ? 'btn-warning' : 'btn-success');
+    property.classList.remove(cmpltd ? 'btn-success' : 'btn-warning');
   }
 
 }
