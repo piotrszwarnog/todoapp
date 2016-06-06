@@ -8,8 +8,24 @@ body {
     font-family: "Courier New", Courier, sans-serif;
 }
 
-.todo-column {
-    width: 300px;
+#header-row {
+    font-size: large;
+}
+
+#todo-column {
+    width: 200px;
+}
+
+#whos-column {
+    width: 150px;
+}
+
+#complete-column {
+    width: 30px;
+}
+
+#delete-column {
+    width: 30px;
 }
 
 .table-borderless tbody tr td,
@@ -20,4 +36,12 @@ body {
 
 .delete-button {
     font-family: "Lucida Console", Lucida, sans-serif;
+}
+
+.input {
+    color: #262626;
+}
+
+add-input{
+display:inline-flex;
 }
