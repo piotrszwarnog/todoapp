@@ -28,6 +28,10 @@ body {
     width: 30px;
 }
 
+.filter-labels label {
+    margin-right: 20px;
+}
+
 .table-borderless tbody tr td,
 .table-borderless tbody tr th,
 .table-borderless thead tr th {

@@ -2,15 +2,17 @@
     <br>
     <h1>Tuduap</h1>
     <br>
-    <label>filter by email
-        <input class="input" type="checkbox" ng-disabled="tuduapp.userAddress == ''" ng-model="doFilter" ng-init="doFilter = false">
-    </label>
-    <label>show done
-        <input type="checkbox" ng-model="showDone" ng-init="false">
-    </label>
-    <label>show pending
-        <input type="checkbox" ng-model="showPending" ng-init="false">
-    </label>
+    <div class="filter-labels">
+        <label>filter by email
+            <input class="input" type="checkbox" ng-disabled="tuduapp.userAddress == ''" ng-model="doFilter" ng-init="doFilter = false">
+        </label>
+        <label>show done
+            <input type="checkbox" ng-model="showDone" ng-init="false">
+        </label>
+        <label>show pending
+            <input type="checkbox" ng-model="showPending" ng-init="false">
+        </label>
+    </div>
     <br><br>
     <table class="table table-condensed table-borderless">
         <tbody>
