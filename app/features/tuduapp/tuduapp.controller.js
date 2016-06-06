@@ -30,18 +30,18 @@ export default class TuduappController {
     var cmpltd;
 
     inputRef.once("value", function(snapshot) {
-        console.log(snapshot.child(id).val().completed);
+      console.log(snapshot.child(id).val().completed);
       if (snapshot.child(id).val().completed == 'true') {
         inputRef.child(id).update({
           'completed': 'false'
         });
-        cmpltd=false;
+        cmpltd = false;
       }
       else {
         inputRef.child(id).update({
           'completed': 'true'
         });
-        cmpltd=true;
+        cmpltd = true;
       }
 
     });
@@ -50,7 +50,6 @@ export default class TuduappController {
 
   updateButtonColor(cmpltd, btn) {
     var property = document.getElementById(btn);
-    //property.classList.contains('active');
     property.classList.add(cmpltd ? 'btn-info' : 'btn-success');
     property.classList.remove(cmpltd ? 'btn-success' : 'btn-info');
   }

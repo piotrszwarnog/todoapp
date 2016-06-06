@@ -4,10 +4,8 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import routing from './config';
 import tuduapp from './features/tuduapp';
-  
-   angular
+
+angular
    .module('app', [uirouter, tuduapp])
    .config(routing)
    .name;
-  
-  
