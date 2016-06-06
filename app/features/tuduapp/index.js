@@ -11,7 +11,7 @@ import TuduappController from './tuduapp.controller';
 import addInput from './directives/add_input';
 
 
-export default angular.module('app.github', [uirouter, angularFire])
+export default angular.module('app.tuduapp', [uirouter, angularFire])
   .config(routing)
   .controller('TuduappController', TuduappController)
   .directive('addInput', addInput)

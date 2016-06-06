@@ -3,7 +3,7 @@
     <h1>Tuduap</h1>
     <br>
     <label>email: <input ng-model="tuduapp.userAddress"></label>
-    <label>filter by email <input type="checkbox" ng-model="filter" ng-init="filter = false"></label>
+    <label>filter by email <input type="checkbox" ng-disabled="tuduapp.userAddress == ''" ng-model="doFilter" ng-init="doFilter = false"></label>
     <label>show done <input type="checkbox" ng-model="showDone" ng-init="showDone = false"></label>
     <div class="table-responsive">
         <table class="table table-condensed table-borderless">
@@ -11,13 +11,13 @@
             <tr>
                 <th class="todo-column">Todo</th>
                 <th>Who's</th>
-                <th>Complete</th>
+                <th></th>
                 <th></th>
             </tr>
-            <tr ng-repeat="item in tuduapp.items| filter:(filter ? tuduapp.userAddress:strict)" >
+            <tr ng-repeat="item in tuduapp.items | filter: (doFilter ? {'userAddress': tuduapp.userAddress} : ''):doFilter | filter: { 'completed' : tuduapp.completed } " >
                 <td>{{item.content}}</td>
                 <td>{{item.userAddress}}</td>
-                <td><input type="checkbox" value="{{ item.completed }}" /></td>
+                <td><button class="btn btn-info btn-xs" id='completeButton' ng-click="tuduapp.completeItem(item.$id, 'completeButton')" >✓</button></td>
                 <td><button class="btn btn-danger btn-xs delete-button" ng-click="tuduapp.deleteItem(item.$id)" >X</button></td>
             </tr>
             </tbody>
